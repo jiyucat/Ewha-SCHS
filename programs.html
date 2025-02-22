@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Ewha Music Therapy Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class = "page-content programs-page">
+    <!-- header -->
+    <div id="header"></div>
+    <script>
+        // Load Header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <main>
+        <!-- 프로그램 목록 -->
+        <section id="program-list">
+            <h2>Explore Our Programs</h2>
+            <div class="program">
+                <h3>Music Therapy Internship</h3>
+                <p>
+                    Gain hands-on experience by working directly with individuals with disabilities at SCHS. 
+                    This program is designed for advanced students and professionals in music therapy.
+                </p>
+                <p><strong>Who can join:</strong> Graduate students, professionals</p>
+            </div>
+
+            <div class="program">
+                <h3>Professional Training Program</h3>
+                <p>
+                    Enhance your skills through expert-led training sessions focused on advanced techniques in music therapy.
+                    The program is tailored for SCHS staff and other professionals in the field.
+                </p>
+                <p><strong>Who can join:</strong> SCHS staff, experienced therapists</p>
+            </div>
+
+            <div class="program">
+                <h3>Community-Based Music Therapy</h3>
+                <p>
+                    Participate in community workshops that use music therapy to improve social interaction, 
+                    emotional well-being, and collective creativity.
+                </p>
+                <p><strong>Who can join:</strong> General public, community leaders</p>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <div id="footer"></div>
+    <script>
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
