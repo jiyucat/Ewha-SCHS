@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ewha Music Therapy Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- header -->
+    <div id="header"></div>
+    <script>
+        // Load Header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <!-- main -->
+    <main>
+        <!--상단 이미지 + 설명 섹션-->>
+        <section id="home" class="hero">
+            <p>A collaboration between Ewha Womans University and SCHS.</p>
+        </section>
+
+        <!-- 중단 카드 섹션 -->
+        <section class="card-section">
+            <a href = "about.html"class="card">
+            <img src="piano.jpg" alt="Piano">
+            <h2>About the Workshop</h2>
+            <p>Learn more about our goals and the benefits of music therapy.</p>
+            </a>
+            <a href="programs.html" class="card">
+            <img src="guitar.jpg" alt="Guitar">
+            <h2>Program Details</h2>
+            <p>Discover the detailed schedule and offerings of our therapy programs.</p>
+            </a>   
+            <a href="news.html" class="card">
+            <img src="music-theraphy.jpg" alt="Program Details">
+            <h2>News</h2>
+            <p>See moments from our workshops and sessions showed in the news.</p>
+            </a>
+            <a href="acknowledgement.html" class="card">
+            <img src="room.jpg" alt="Gallery">
+            <h2>Acknowledgement</h2>
+            <p>Expressing our gratitude to those who contributed to this session.</p>
+            </a>
+        </section>
+
+
+        <!-- 하단 그림+ 포부 섹션 -->
+        <section class="overlay-section">
+            <div class="image-container">
+                <img src="wide-image.jpg" alt="Wide Image">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>
+                            Connecting Souls Through the Healing Power of Music
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        
+
+        <!-- 하단 contact 섹션 -->
+        <section id="social-info">
+            <div class="info-section">
+                <!-- Sharjah Section -->
+                <div class="info-item">
+                    <h2>Sharjah</h2>
+                    <p>
+                        Sharjah City for Humanitarian Services (SCHS) is a leading organization in providing therapy and education 
+                        for individuals with disabilities. Learn more about their collaboration with Ewha Womans University.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                        <a href="https://youtube.com" target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
+                        <a href="https://blog.com" target="_blank"><img src="blog-icon.png" alt="Blog"></a>
+                        <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="button">Contact Us</a>
+                        <a href="#" class="button">Visit Us</a>
+                    </div>
+                </div>
+        
+                <!-- Ewha Section -->
+                <div class="info-item">
+                    <h2>Ewha</h2>
+                    <p>
+                        Ewha Womans University, a pioneer in music therapy education, has been collaborating with SCHS 
+                        to train professionals and empower communities through innovative therapy programs.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                        <a href="https://youtube.com" target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
+                        <a href="https://blog.com" target="_blank"><img src="blog-icon.png" alt="Blog"></a>
+                        <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#" class="button">Contact Us</a>
+                        <a href="#" class="button">Visit Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script>
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+    <script src="slider.js"></script>
+</body>
+</html>
