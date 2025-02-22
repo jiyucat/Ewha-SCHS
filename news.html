@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Ewha Music Therapy Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class = "page-content news-page">
+    <!-- Header -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <main>
+        <h1>Latest News</h1>
+        <p>Stay updated with the latest news about Ewha Music Therapy Workshop and our events worldwide.</p>
+
+        <!-- News Container -->
+        <div class="news-container" id="news-container">
+            <!-- JavaScript will dynamically load news articles here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <!-- JavaScript -->
+    <script src="news.js"></script>
+</body>
+</html>
