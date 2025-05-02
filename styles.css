@@ -485,6 +485,105 @@ nav a:hover {
   background-color: #00796b;
 }
 
+
+/*========= Timeline 페이지 ======= */
+
+/*----- 연혁 가로 -----*/
+/* ===== 가로 타임라인 연도 바 ===== */
+.years-bar {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.years-line {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 0;
+}
+
+.year-marker {
+  position: relative;
+  text-align: center;
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* 점 (marker 원) */
+.year-marker::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 6px;
+  z-index: 1;
+  position: relative;
+}
+
+
+
+/*----- 연혁 세로 -----*/
+.timeline {
+  background: #fdf7f0;
+  padding: 40px 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column; /* 수직 정렬로 변경 */
+  gap: 20px;               /* 카드 간 간격 */
+  max-width: 800px;        /* 전체 너비 제한 */
+  margin: 0 auto;          /* 가운데 정렬 */
+}
+
+.timeline-item {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 100%;             /* 부모의 최대 너비를 따라감 */
+  box-sizing: border-box;  /* padding 포함한 크기 계산 */
+  border-left: 6px solid #4caf50;
+}
+
+.timeline-year {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.timeline-content strong {
+  color: #ff9800;
+}
+
 /*====== news 페이지 ======*/
 
 /* News Container */
