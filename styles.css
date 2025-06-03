@@ -77,21 +77,14 @@ nav a:hover {
 
 /* 중앙 사진 섹션 배경과 텍스트 스타일 */
 .hero {
-    background-image: url("building.jpg");
+    background-image: url("main-image.png");
     background-repeat: no-repeat;
-    background-size: 100% 98%;
+    background-size: 100% 150%;
     color: white;
     padding: 50px 20px;
     padding-top: 200px;
-    text-align: left 40px;
     margin-top: 60px;
-}
-
-.hero p {
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7)
+    height: 200px;
 }
 
 /* 카드 섹션 */
