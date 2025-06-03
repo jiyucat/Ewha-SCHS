@@ -128,6 +128,12 @@
     </section>
   </main>
 
+  <!-- 모달 구조-->
+  <div id="image-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content" id="modal-images"></div>
+  </div>
+
   <!-- Footer -->
   <div id="footer"></div>
   <script>
@@ -139,18 +145,84 @@
   <!-- 모달 js -->
   <script>
     const imageMap = {
+      "2013-January": [
+        "images/2013_Jan. 3-2.png",
+        "images/2013_Jan. 4-1.png",
+        "images/2013_Jan. 4-2.png",
+        "images/2013_Jan. 4-3.png",
+      ],
+      "2013-October": [
+        "images/2013_Oct. 17-2.png",
+        "images/2013_Oct. 17-3.png",
+        "images/2013_Oct..png",
+        "images/2013_Oct.17-1.png"
+      ],
+      "2014-January": [
+        "images/2014_Jan.png",
+        "images/2014_Jan.png"
+      ],
+      "2014-April": [
+      ],
+      "2014-September": [
+        "images/2014_Sep. 12-3.png",
+        "images/2014_Sep. 12-4.png",
+        "images/2014_Sep.12-1.png",
+      ],
+      "2015-January": [
+        "images/2015_Jan 9-1.png"
+      ],
+      "2015-Febuary": [
+        "images/2015_Feb. 13-4.png"
+      ],
+      "2015-March": [
+      ],
+      "2016-January": [
+        "images/2016_Jan 10-2.png",
+        "images/2016_Jan. 14-4.png",
+        "images/2016_Jan. 15-1.png",
+        "images/2016_Jan. 15-2.png"
+      ],
+      "2016-Febuary": [
+        "images/2016_Feb 26-1.png",
+        "images/2016_Feb. 13-1.png",
+        "images/2016_Feb_ 26-2.png"
+      ],
+      "2017-January": [
+        "images/2017_슬라이드 10-1.png",
+        "images/2017_슬라이드 14-2.png"
+      ],
+      "2018-January": [
+        "images/2018.png",
+        "images/2018_슬라이드 11-1.png",
+        "images/2018_슬라이드 14-3.png"
+      ],
+      "2019-January": [
+        "images/2019.png",
+        "images/2019_`.png"
+      ],
+      "2020-January": [
+        "images/2020_jan_1.jpg"
+      ],
+      "2021-January": [
+        "images/2021_jan_1.jpg"
+      ],
+      "2022-January": [
+        "images/2022_jan_1.jpg"
+      ],
+      "2023-January": [
+        "images/2023_jan_1.jpg"
+      ],
+      "2024-January": [
+        "images/2024_jan_1.jpg"
+      ],
       "2025-January": [
         "images/2025_jan_1.jpg",
         "images/2025_jan_2.jpg",
         "images/2025_jan_3.jpg",
         "images/2025_jan_4.jpg"
-      ],
-      "2019-January": [
-        "images/2019_jan_1.jpg",
-        "images/2019_jan_2.jpg",
-        "images/2019_jan_3.jpg"
       ]
     };
+
 
     document.querySelectorAll(".timeline-entry").forEach(entry => {
       entry.addEventListener("click", () => {
