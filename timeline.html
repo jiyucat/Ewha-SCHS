@@ -135,5 +135,56 @@
       .then(response => response.text())
       .then(data => document.getElementById('footer').innerHTML = data);
   </script>
+
+  <!-- 모달 js -->
+  <script>
+    const imageMap = {
+      "2025-January": [
+        "images/2025_jan_1.jpg",
+        "images/2025_jan_2.jpg",
+        "images/2025_jan_3.jpg",
+        "images/2025_jan_4.jpg"
+      ],
+      "2019-January": [
+        "images/2019_jan_1.jpg",
+        "images/2019_jan_2.jpg",
+        "images/2019_jan_3.jpg"
+      ]
+    };
+
+    document.querySelectorAll(".timeline-entry").forEach(entry => {
+      entry.addEventListener("click", () => {
+        const year = entry.dataset.year;
+        const month = entry.dataset.month;
+        const key = `${year}-${month}`;
+        const images = imageMap[key];
+
+        if (!images) return;
+
+        const modal = document.getElementById("image-modal");
+        const modalContent = document.getElementById("modal-images");
+        modalContent.innerHTML = "";
+
+        images.forEach(src => {
+          const img = document.createElement("img");
+          img.src = src;
+          modalContent.appendChild(img);
+        });
+
+        modal.style.display = "block";
+      });
+    });
+
+    document.querySelector(".modal-close").addEventListener("click", () => {
+      document.getElementById("image-modal").style.display = "none";
+    });
+
+    window.addEventListener("click", e => {
+      const modal = document.getElementById("image-modal");
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
